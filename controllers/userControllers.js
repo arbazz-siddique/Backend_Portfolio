@@ -103,7 +103,7 @@ export const logout = catchAsynError(async(req,res,next)=>{
   res.status(200).cookie("token", "", {
     expires:new Date(Date.now()),
     httpOnly:true,
-    sameSite:"none",
+    sameSite:"None",
     secure:true,
   }).json({
     success:true,
